@@ -45,7 +45,7 @@ namespace FizzBuzzLibrary.Tests
             var fizzBuzz = new FizzBuzz();
             var range = new Range<int>() { Minimum = 8, Maximum = 15 };
 
-            var result = fizzBuzz.Calculate(range, new List<FizzBuzzNumberConfiguration>());
+            var result = fizzBuzz.Calculate(range, new List<FizzBuzzNumber>());
             var lineCount = LineCount(result);
 
             Assert.Equal(lineCount, 8);
@@ -56,7 +56,7 @@ namespace FizzBuzzLibrary.Tests
         {
             var fizzBuzz = new FizzBuzz();
             const string MessageForNumbersDivisibleByFive = "Divisible by five";
-            var fizzBuzzNumber = new FizzBuzzNumberConfiguration() { Divisor = 5, Message = MessageForNumbersDivisibleByFive };
+            var fizzBuzzNumber = new FizzBuzzNumber() { Divisor = 5, Message = MessageForNumbersDivisibleByFive };
             var wordToDisplay = fizzBuzz.GetWordToDisplay(15, fizzBuzzNumber);
 
             Assert.Equal(MessageForNumbersDivisibleByFive, wordToDisplay);
@@ -67,7 +67,7 @@ namespace FizzBuzzLibrary.Tests
         {
             var fizzBuzz = new FizzBuzz();
             const string wordToDisplayForNumbersDivisibleByFive = "Divisible by five";
-            var numberConfig = new FizzBuzzNumberConfiguration() { Divisor = 5, Message = wordToDisplayForNumbersDivisibleByFive };
+            var numberConfig = new FizzBuzzNumber() { Divisor = 5, Message = wordToDisplayForNumbersDivisibleByFive };
 
             var wordToDisplay = fizzBuzz.GetWordToDisplay(13, numberConfig);
 
@@ -80,10 +80,10 @@ namespace FizzBuzzLibrary.Tests
             const string messageFor5 = "Nice! Hai Fivez!";
             const string messageFor7 = "Lucky Number Se7en";
 
-            var fizzBuzzNumbers = new List<FizzBuzzNumberConfiguration>()
+            var fizzBuzzNumbers = new List<FizzBuzzNumber>()
             {
-                new FizzBuzzNumberConfiguration() { Divisor = 5, Message = messageFor5 },
-                new FizzBuzzNumberConfiguration() { Divisor = 7, Message = messageFor7 }
+                new FizzBuzzNumber() { Divisor = 5, Message = messageFor5 },
+                new FizzBuzzNumber() { Divisor = 7, Message = messageFor7 }
             };
 
             var range = new Range<int>() { Minimum = 5, Maximum = 10 };

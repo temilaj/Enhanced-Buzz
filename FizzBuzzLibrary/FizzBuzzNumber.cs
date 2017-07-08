@@ -1,6 +1,6 @@
 namespace FizzBuzzLibrary
 {
-    public class FizzBuzzNumberConfiguration
+    public class FizzBuzzNumber
     {
         public int Divisor { get; set; }
 

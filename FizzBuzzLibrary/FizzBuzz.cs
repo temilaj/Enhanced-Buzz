@@ -6,7 +6,7 @@ namespace FizzBuzzLibrary
 {
     public class FizzBuzz
     {
-        public string Calculate(Range<int> range, List<FizzBuzzNumberConfiguration> fizzBuzzNumbers)
+        public string Calculate(Range<int> range, List<FizzBuzzNumber> fizzBuzzNumbers)
         {
             var counter = range.Minimum;
 
@@ -28,7 +28,7 @@ namespace FizzBuzzLibrary
             return stringBuilder.ToString();
         }
 
-        public string GetWordToDisplay(int numberToDivide, FizzBuzzNumberConfiguration fizzBuzzNumber)
+        public string GetWordToDisplay(int numberToDivide, FizzBuzzNumber fizzBuzzNumber)
         {
             if (IsDivisibleByNumber(numberToDivide, fizzBuzzNumber.Divisor))
             {
