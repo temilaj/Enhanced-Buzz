@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using FizzBuzzLibrary;
 
-namespace FizzBuzz
+namespace FizzBuzzApp
 {
     class Program
     {
